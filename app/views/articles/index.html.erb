@@ -1,0 +1,12 @@
+<div class="container d-flex justify-content-center pt-5">
+  <div class="my-5">
+    <% @articles.each do |article| %>
+      <div class="row">
+        <div class="col-md-12">
+          <h2><%= link_to article.title, article_path(article[:id]), class: "text-decoration-none" %></h2>
+          <p><%= article.content %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

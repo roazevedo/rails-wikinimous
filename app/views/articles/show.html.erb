@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center pt-5">
+  <div class="container my-5" style="max-width: 800px; width: 100%;">
+    <h1>
+      <%= @article.title %>
+
+      <%= link_to edit_article_path(@article) do %>
+        <i class="fa-solid fa-pencil"></i>
+      <% end %>
+
+      <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you shure?"} do %>
+        <i class="fa-solid fa-trash-can mx-2"></i>
+      <% end %>
+    </h1>
+    <hr>
+    <p><%= @article.content %></p>
+  </div>
+</div>

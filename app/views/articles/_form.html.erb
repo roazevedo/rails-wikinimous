@@ -1,0 +1,13 @@
+<%= form_with model: article do |f| %>
+  <div class="form-group">
+    <%= f.label :title, class: "mb-2" %>
+    <%= f.text_field :title, class: "form-control mb-2" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content, class: "mb-2" %>
+    <%= f.text_area :content, class: "form-control mb-2" %>
+  </div>
+  <div class="form-group mt-3">
+    <%= f.submit article.persisted? ? "Update Article" : "Create Article", class: "btn btn-primary" %>
+  </div>
+<% end %>
